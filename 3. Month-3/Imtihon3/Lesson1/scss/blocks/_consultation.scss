@@ -1,0 +1,20 @@
+.consultation{
+    display: flex;
+    margin: 200px 0;
+}
+
+.consultation-text{
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+
+
+.consultation-text h1 {
+  font-weight: 800;
+  font-size: 48px;
+  line-height: 150%;
+  text-decoration-line: underline;
+  color: #01374b;
+}

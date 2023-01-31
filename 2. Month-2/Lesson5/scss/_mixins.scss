@@ -1,0 +1,26 @@
+@mixin btn($bg-color , $color) {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  background: $bg-color;
+  color: $color;
+  width: fit-content;
+  padding: 12px 41px;
+  border-radius: 50px;
+  border: none;
+}
+
+@mixin circle  ($color , $path) {
+  display: inline-block;
+  border-radius: 50px;
+  width: 40px;
+  height: 40px;
+  background: $color;
+  background-image: url($path);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size:inherit;
+
+}
+

@@ -1,0 +1,29 @@
+@mixin btn {
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 25px;
+  text-align: center;
+  color: #ffffff;
+  background: #fcb72b;
+  padding: 14px 39px;
+  width: fit-content;
+}
+@mixin link {
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 25px;
+  color: #939caa;
+}
+// @mixin phone {
+//     @media only screen and (max-width: 320px) {
+//        content: ""; 
+//       }
+// }
+// @mixin tablet {
+//     @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+//        .container{
+//         max-width: 768px;
+//         padding: 0 40px;
+//        }
+//       }
+// }

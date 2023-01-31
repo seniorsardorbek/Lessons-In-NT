@@ -1,0 +1,138 @@
+.intro-section {
+  background-image: url(../img/intro.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.intro-section::after {
+  content: url(../img/introarrow.svg);
+  position: absolute;
+  top: 354px;
+  left: 0;
+}
+// section{
+// }
+.intro {
+  top: 90px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.intro__title {
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 56px;
+  letter-spacing: -2.5px;
+  color: #ffffff;
+  width: 500px;
+  margin-top: 150px;
+}
+.intro__text {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 25px;
+  width: 405px;
+  color: #ffffff;
+  position: absolute;
+  left: 52px;
+  bottom: 42px;
+}
+.intro-btn {
+  margin: 180px 0 150px 90px;
+  @include btn;
+}
+.cirecles {
+  position: absolute;
+  display: flex;
+  gap: 24px;
+  left: 1205px;
+  top: 425px;
+}
+.circle {
+  display: block;
+  border: 3px solid #ffffff;
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+}
+.circle:nth-child(3) {
+  background-color: #ffffff;
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .container {
+    max-width: 768px;
+    padding: 0 40px;
+  }
+  .cirecles{
+    display: none;
+  }
+  .intro {
+    align-items: center;
+  }
+  .intro__title {
+    text-align: center;
+  }
+  .intro__text {
+    left: 112px;
+    top: 310px;
+    text-align: center;
+    width: 573px;
+  }
+  .intro-btn {
+    margin: 100 auto;
+  }
+  .intro-section::after {
+    content: url(../img/tabletarrowinto.png);
+    position: absolute;
+    top: 480px;
+    left: 0;
+  }
+}
+// Phone
+@media only screen and (max-width: 768px) {
+  .container {
+    max-width: 375px;
+    padding: 0 32px;
+  }
+  .intro__title {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 40px;
+    text-align: center;
+    letter-spacing: -1.78571px;
+    width: 300px;
+    margin: 115px auto 15px;
+  }
+  .intro__text {
+    position: relative;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 25px;
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
+    left: 0;
+    bottom: 0;
+  }
+  .intro-section::after {
+    content: url(../img/phonearrow.svg);
+    top: 430px;
+  }
+  .intro-btn {
+    margin: 183px auto 10px;
+  }
+  .intro__text {
+    position: relative;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 25px;
+    text-align: center;
+    width: 311px;
+    margin: 0 auto;
+    left: 0;
+    top: -240px;
+  }
+  .cirecles{
+    display: none;
+  }
+}

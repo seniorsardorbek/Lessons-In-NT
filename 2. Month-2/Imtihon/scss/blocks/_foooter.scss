@@ -1,0 +1,38 @@
+.footer-container {
+  background: #333a44;
+}
+.footer {
+  display: flex;
+  align-items: center;
+}
+.white {
+  color: #939caa;
+  padding: 35px 0;
+}
+.icons {
+  display: flex;
+  gap: 24px;
+}
+.icons a i {
+  color: #939caa;
+}
+
+.icons a:hover > i {
+  color: #fcb72b;
+}
+@media only screen and (max-width: 768px) {
+  .container {
+    max-width: 375px;
+    padding: 0 32px;
+  }
+  nav .footer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  .icons {
+    margin: 15px auto;
+  }
+}

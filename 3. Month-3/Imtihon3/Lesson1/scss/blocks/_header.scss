@@ -1,0 +1,28 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 25px auto;
+  transition: all 1s;
+}
+.logos {
+  display: flex;
+  gap: 40px;
+}
+.nav {
+  display: flex;
+  gap: 40px;
+}
+.nav a {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #01374b;
+  padding: 20px 10px;
+  border-bottom: 3px solid transparent;
+  &:hover {
+    border-bottom: 3px solid #049fd9;
+    color: #049fd9;
+    transition: ease-out 0.5s;
+  }
+}

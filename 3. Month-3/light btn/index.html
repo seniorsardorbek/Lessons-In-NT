@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Night Club</title>
+</head>
+<style>
+    .normal{
+        animation: monFrame 10s infinite alternate
+    }
+    .faster{
+        animation: monFrame 1s infinite alternate
+    }
+    .fast{
+        animation: monFrame 0.1s infinite alternate
+    }
+    @keyframes monFrame {
+        0%{
+            background-color: aqua;
+        }
+        10%{
+            background-color: red;
+        }
+        20%{
+            background-color: green;
+        }
+        30%{
+            background-color: black;
+        }
+        40%{
+            background-color: wheat;
+        }
+        50%{
+            background-color: orange;
+        }
+        60%{
+            background-color: purple;
+        }
+        70%{
+            background-color: yellow;
+        }
+        80%{
+            background-color: blue;
+        }
+        90%{
+            background-color: blueviolet;
+        }
+        100%{
+            background-color: white;
+        }
+        
+    }
+    .btns{
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        height: 90vh;
+        width: 100%;
+    }
+</style>
+<body >
+    <div class="btns " id="bodyid">
+    
+        <button id="norm"onclick="normal()" >Normal</button>
+        <button id="faster" onclick="faster()">Tezroq</button>
+        <button id="fast" onclick="fast()">Tez</button>
+</div>
+    <script src="./js/main.js"></script>
+</body>
+</html>

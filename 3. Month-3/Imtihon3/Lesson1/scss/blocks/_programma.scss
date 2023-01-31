@@ -1,0 +1,36 @@
+
+
+
+ .marketing{
+    background-image: url(../../img/marketing.png);
+    background-repeat: no-repeat;
+    background-position:  bottom right;
+    height: 703px;
+    background-size: contain;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+ }
+ .marketing h1 {
+  font-weight: 800;
+  font-size: 48px;
+  line-height: 150%;
+  color: #01374b;
+  max-width: 757px;
+}
+.marketing p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 170%;
+  color: #555b5e;
+  width: 510px;
+  margin: 55px 0;
+}
+.marketing-2{
+  background-image: url(../../img/marketing2png.png);
+  background-repeat: no-repeat;
+  background-position:  bottom right;
+  
+}

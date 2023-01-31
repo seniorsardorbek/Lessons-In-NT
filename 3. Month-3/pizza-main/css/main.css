@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  width: 100vw;
+  height: 120vh;
+  box-sizing: border-box;
+  background: radial-gradient(
+      189.96% 61.18% at 50% 38.82%,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.803) 73.22%,
+      #0d0d0d 99.74%
+    ),
+    url("../img/sourdough-pizza-crust.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pizza {
+  display: flexbox;
+  justify-content: center;
+  width: 60%;
+  height: 90%;
+  box-sizing: border-box;
+  background-color: rgba(225, 177, 113, 0.204);
+  border-radius: 20px;
+  border: 10px solid rgba(255, 255, 255, 0.467); ;
+  padding: 20px 50px;
+}
+.form {
+  display: block;
+}
+.form_input {
+  display: block;
+  width: 80%;
+  padding: 8px 20px;
+  margin-bottom: 10px;
+  border-radius: 132px;
+  border: 1px solid #201d2e;
+}
+.pizza_hero__title {
+  color: rgb(72, 249, 255);;
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+.pizza_hero {
+  color: rgb(72, 249, 255);;
+  font-size: 20px;
+}
+.pizza .form__title {
+  font-size: 18px;
+  color: rgb(72, 249, 255);
+  margin-bottom: 10px;
+}
+.pizza .form .size_pizza__input {
+  visibility: hidden;
+}
+.pizza .form .size_pizza__input:checked + .size_pizza__label {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #000;
+}
+.pizza .form .size_pizza {
+  display: flex;
+  margin-bottom: 20px;
+}
+.pizza .form .size_pizza__label {
+  padding: 10px 20px;
+  width: 50px;
+  height: 50px;
+  color: #fff;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.pizza .form .size_pizza__label:not(:last-child) {
+  margin-right: 20px;
+}
+.pizza .checkbox-pizza {
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 265px;
+  justify-content: space-between;
+  align-items: center;
+  user-select: none;
+}
+.pizza .form .checkbox-pizza .pizza_label {
+  cursor: pointer;
+  color: rgb(72, 249, 255);
+}
+.footer{
+    color: #fff;
+}
+.footer h2 span  {
+    color: rgb(22, 231, 67);
+  }
+  .footer h2 ul  {
+    color: rgb(22, 231, 67);
+  }

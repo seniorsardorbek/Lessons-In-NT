@@ -1,0 +1,109 @@
+.section-2 {
+  margin-top: 100px;
+  position: relative;
+}
+.boxes {
+  display: flex;
+  gap: 30px;
+}
+.boxes::after {
+  content: "";
+  width: 973px;
+  height: 10px;
+  background-color: #e5ecf4;
+  display: block;
+  position: absolute;
+  top: 40px;
+  left: -10px;
+  z-index: -99;
+}
+.oval {
+  height: 96px;
+  width: 96px;
+  background-color: #fcb72b;
+  border-radius: 50%;
+  background-image: url(../img/kuryer.png);
+  display: block;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 999;
+}
+.oval-2 {
+  background-image: url(../img/scooter.png);
+}
+.oval-3 {
+  background-image: url(../img/skuter.png);
+}
+.box-title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: -1.07143px;
+  color: #495567;
+  margin: 40px 0 27px;
+}
+.box-text {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 25px;
+  width: 350px;
+  color: #939caa;
+}
+
+// Tablet
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .container {
+    max-width: 768px;
+    padding: 0 40px;
+  }
+  .boxes {
+    flex-direction: column;
+  }
+  .boxes__box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 80px;
+    flex-wrap: nowrap;
+  }
+  .box-text {
+    width: 400px;
+  }
+  .boxes::after {
+    content: "";
+    width: 10px;
+    height: 673px;
+    background-color: #e5ecf4;
+    display: block;
+    position: absolute;
+    top: -100px;
+    left: 190px;
+    z-index: 9;
+  }
+}
+// Phone
+@media only screen and (max-width: 768px) {
+  .container {
+    max-width: 375px;
+    padding: 0 32px;
+  }
+   .oval{
+    margin: auto;
+   }
+  .box-title {
+    font-size: 20px;
+    text-align: center;
+    margin: 38px auto 24px;
+  }
+  .box-text {
+    text-align: center;
+  }
+  .boxes {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .boxes::after {
+   display: none;
+  }
+}

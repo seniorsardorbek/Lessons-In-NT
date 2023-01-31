@@ -1,0 +1,109 @@
+.container-4 {
+  margin: 0 auto;
+  max-width: 1920px;
+  padding: 0;
+  display: flex;
+  background-image: url(../img/containerbg.png);
+  background-repeat: no-repeat;
+  background-position:  bottom right;
+}
+.container-4 img {
+  flex-direction: column;
+  padding: 130px;
+}
+.container-4-box {
+  padding: 130px;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: space-evenly;
+}
+.container-4-box h2 {
+  font-weight: 700;
+  font-size: 55px;
+  line-height: 67px;
+  letter-spacing: 0.06em;
+  color: #000;
+}
+.container-4-box p {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.06em;
+  color: #000000;
+}
+@media only screen and (min-device-width: 765px) and (max-device-width: 1850px) {
+  .container-4 {
+    max-width: 968px;
+    padding: 0px;
+    height: 500px;
+    position: relative;
+    background-image: none;
+
+  }
+  .container-4 img {
+    padding: 0;
+    position: absolute;
+    top: 50px;
+    content: url(../img/cutimage.png);
+  }
+  .container-4-box {
+    position: absolute;
+    left: 40%;
+    padding: 50px;
+    padding-top: 85px;
+    background-image: url(../img/sterilization.png);
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-size:45%;
+  }
+  .container-4-box h2 {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 37px;
+    letter-spacing: 0.06em;
+    color: #000;
+  }
+  .container-4-box p {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.06em;
+    color: #000000;
+    opacity: 0.6;
+  }
+}
+@media only screen and (max-width: 764px) {
+  .container-4 {
+    background-image: none;
+    padding: 0 14px;
+    max-width: 360px;
+    margin: 0 auto;
+    flex-direction: column;
+  }
+  .container-4 img {
+    padding: 20px 0;
+   
+  }
+  .container-4-box{
+    padding: 0;
+  }
+  .container-4-box h2 {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 37px;
+    letter-spacing: 0.06em;
+    color: #000;
+    text-align: center;
+  }
+  .container-4-box p {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.06em;
+    color: #000000;
+    opacity: 0.6;
+    text-align: center;
+  }
+}

@@ -1,0 +1,135 @@
+.header {
+  display: flex;
+  color: white;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  width: 85%;
+}
+.logo span {
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    font-family: 'Dancing Script', cursive;
+  }
+a.effect-shine {
+    mask-image: linear-gradient(-75deg, rgba(24, 55, 121, 0.6) 3rgb(29, 52, 122)#000 50%, rgba(33, 64, 177, 0.6) 70%);
+    mask-size: 200%;
+    animation: shine 2s infinite;
+  }
+
+
+
+
+ .logo span{
+    display: inline-flex;
+    color: #fff;
+    font-size: 22px;
+    font-family: 'Dancing Script', cursive;
+    border-bottom: 2px solid #fff;
+    
+  
+  }
+  
+ .logo span:nth-child(even){
+  font-size: 22px;
+    overflow: hidden;
+    transition: ease-in-out 0.5s;
+    color: #fff;
+    border-bottom: 2px solid #fff;
+    letter-spacing: -1em;
+  }
+  
+ .logo:hover span:nth-child(even){
+    letter-spacing: 0;
+    cursor: pointer;
+  }
+  
+ .logo:hover span:nth-child(2){
+    transition-delay: 0s;
+  
+  }
+  
+ .logo:hover span:nth-child(4){
+    transition-delay: 0.5s;
+  
+  }
+  
+ .logo:hover span:nth-child(6){
+    transition-delay: 1s;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  @keyframes shine {
+    from {
+      mask-position: 150%;
+    }
+    
+    to {
+      mask-position: -50%;
+    }
+  }
+.header-nav {
+  display: flex;
+  gap: 50px;
+  a {
+    color: white;
+    padding: 15px 10px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+    border-bottom: 2px solid transparent;
+    &:hover {
+      color: rgba(73, 115, 255, .6);
+      border-bottom-color: rgba(73, 115, 255, .6);
+    }
+  }
+}
+
+.sardor a {
+    color: rgb(255, 255, 255);
+    font-size: 1.2em;
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    font-family: 'Dosis', sans-serif;
+  }
+a.effect-shine {
+    mask-image: linear-gradient(-75deg, rgba(68, 35, 198, 0.6) 30%, rgb(40, 40, 221) 50%, rgba(44, 68, 203, 0.6) 70%);
+    size: 200%;
+    animation: shine 2s infinite;
+  }
+  
+  @-webkit-keyframes shine {
+    from {
+     mask-position: 150%;
+    }
+    
+    to {
+      position: -50%;
+    }
+  }

@@ -1,0 +1,94 @@
+.container{
+    max-width: 1400px;
+    margin: 0 auto;
+    background-image: url(./img/ivan-torres-MQUqbmszGGM-unsplash.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 60px;
+    box-shadow: 0px -5px 84px 86px rgba(0,0,0,0.75) inset;
+    -webkit-box-shadow: 0px -5px 84px 86px rgba(0,0,0,0.75) inset;
+    -moz-box-shadow: 0px -5px 84px 86px rgba(0,0,0,0.75) inset;
+}
+.main{
+    border: 1px solid transparent;
+    border-radius: 30px;
+    background-color: rgba(0, 0, 0, 0.596);
+    width: 1100px;
+    height: 580px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding:  0 30px;
+    color: white;
+}
+.size-div{
+    display:flex;
+    flex-direction: row;
+}
+ .contact{
+    padding: 20px;
+ }
+.contact input {
+    background-color: transparent;
+    padding: 8px;
+    border: 1px solid white;
+    color: white;
+}
+
+#nonid{
+    width: 150px;
+    margin: 20px;
+    height: 30px;
+    margin-top: 0px;
+    margin-bottom: 50px;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.488);
+    color: white;
+    border: none;
+}
+.size-div{
+    display: inline;
+    width: 100px;
+}
+.size-title{
+    font-size: 20px;
+    color: white;
+
+}
+.size input{
+    display: none;
+}
+.qoshimcha{
+    display: flex;
+    gap: 50px;
+    margin: 20px;
+}
+.btn{
+    border: 1px solid antiquewhite;
+    padding: 7px 28px;
+    width: fit-content;
+    border-radius: 9px;
+    font-size: 15px;
+    background-color: rgba(0, 0, 0, 0.359);
+    color: antiquewhite;
+    margin-top: 10px;
+}
+
+
+.chechmark{
+    border: 1px solid white;
+    padding: 10px;
+    border-radius: 50%;
+    color: white;
+}
+.input:checked + .chechmark{
+    background-color: antiquewhite;
+    color: black;
+}
+.admin{
+    width: 500px;
+}
+.lists{
+    display: grid;
+    grid-template-columns: auto auto auto;
+}

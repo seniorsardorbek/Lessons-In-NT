@@ -1,0 +1,70 @@
+.section-intro {
+  background-image: url(../img/intro.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: auto;
+}
+.intro {
+  min-height: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.intro h1 {
+  font-weight: 800;
+  font-size: 64px;
+  line-height: 150%;
+  color: #eefaff;
+}
+
+.intro p {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 150%;
+  color: #eefaff;
+  margin: 35px 0 55px;
+}
+.btns {
+  transition: 0.8s;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.btn {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+  text-align: center;
+  color: #eefaff;
+  padding: 14px 56px;
+  border-radius: 40px;
+  border: 1px solid #049fd9;
+  background-color: #049fd9;
+  transition: 1s;
+  &:hover {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 150%;
+    text-align: center;
+    color: #049fd9;
+    padding: 14px 56px;
+    border-radius: 40px;
+    background-color: #eefaff;
+    border: 1px solid #049fd9;
+  }
+}
+.white-btn {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+  text-align: center;
+  color: #049fd9;
+  padding: 14px 56px;
+  border-radius: 40px;
+  background-color: #eefaff;
+  border: 1px solid #049fd9;
+}
+.btns:hover .btn-pic {
+  transform: rotateZ(360deg);
+  transition: 1s;
+}

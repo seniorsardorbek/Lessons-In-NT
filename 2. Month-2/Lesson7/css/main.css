@@ -1,0 +1,32 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  margin: 0 auto;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.box-1 {
+  background-color: blue;
+  height: 80px;
+  border: 2px solid white;
+}
+
+.card1 {
+  background-color: blue;
+  height: 200px;
+  border: 2px solid white;
+}/*# sourceMappingURL=main.css.map */

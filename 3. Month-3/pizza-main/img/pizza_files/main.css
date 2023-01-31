@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+  background: radial-gradient(
+      189.96% 61.18% at 50% 38.82%,
+      rgba(255, 181, 72, 0) 0%,
+      rgba(52, 44, 29, 0.80319) 73.22%,
+      #08090a 99.74%
+    ),
+    url("../img/sourdough-pizza-crust.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pizza {
+    display: flex;
+    justify-content: center;
+  align-items: center;
+  width: 60%;
+  height: 95%;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 20px;
+  padding: 20px 50px;
+}
+.pizza_hero__title {
+  color: rgb(231, 129, 34);
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+.pizza_hero {
+  color: #fff;
+}

@@ -1,0 +1,44 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  margin: 0 auto;
+  width: 1000px;
+}
+
+li {
+  list-style: none;
+}
+
+#cards{
+  display: flex;
+  flex-direction: column;
+  max-width: 290px;
+  align-items: center;
+  justify-content: center;
+  
+}
+#cards{
+  border: 1px solid black;
+  border-radius: 20px;
+}
+.text{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.text p{
+  text-align: center;
+}
+.form{
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  padding: 15px;
+}

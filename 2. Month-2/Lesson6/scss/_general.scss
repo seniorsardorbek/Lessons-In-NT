@@ -1,0 +1,23 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Montserrat', sans-serif;
+}
+.container {
+  margin: 0 auto;
+  max-width: 1920px;
+  padding: 0 200px;
+}
+li {
+  list-style: none;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+@import url('https://fonts.googleapis.com/css2?family=Rochester&display=swap');

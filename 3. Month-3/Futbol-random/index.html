@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .btns{
+            display: flex;
+            justify-content: center;
+        }
+        .names{
+            display: flex;
+        justify-content: center;
+        gap: 50px;
+    }
+    
+    
+    .lists{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="btns">
+    
+            <form  id="form">
+                <!-- <input type="url" placeholder="Your image" id="image"> -->
+                <input type="text" placeholder="Name " id="name">
+                <!-- <input type="text" placeholder="Message"  id="message"> -->
+                <button  type="submit" id="btn"> Submit</button>
+            </form>
+            <button id="render" type="button">Render</button>
+            <button type="click" id="reload">Reload</button>
+        </div>
+         
+        <p id="error"></p>
+        <p id="namesarr">O'yinchilar</p>
+        <div class="names">
+            <ol class="lists">
+                <h1>A command</h1>
+                <li id="list-1">Name</li>
+                <li id="list-2">Name</li>
+                <li id="list-3">Name</li>
+                <li id="list-4">Name</li>
+                <li id="list-5">Name</li>
+            </ol>
+            <ol class="lists">
+                <h1>B command</h1>
+                <li id="list-6">Name</li>
+                <li id="list-7">Name</li>
+                <li id="list-8">Name</li>
+                <li id="list-9">Name</li>
+                <li id="list-10">Name</li>
+            </ol>
+            
+        </div>
+    </div>
+    <script src="./js/main.js"></script>
+</body>
+</html>

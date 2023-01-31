@@ -1,0 +1,28 @@
+.contract h1 {
+  font-weight: 800;
+  font-size: 48px;
+  line-height: 150%;
+  color: #01374b;
+}
+.contract-title {
+  display: flex;
+  margin: 50px 0;
+}
+.contract-text h3 {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 150%;
+  color: #01374b;
+  margin: 15px 0;
+}
+.contract-text ul li {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 170%;
+  color: #555b5e;
+  list-style:disc;
+  margin: 20px 0;
+}
+.contract {
+    margin: 150px auto;
+}

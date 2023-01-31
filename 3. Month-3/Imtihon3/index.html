@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>Document</title>
+    <link rel="stylesheet" href="./main.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="main">
+        <form id="form">
+          <h1 class="title">Pitsa buyurtma qilish</h1>
+          <div class="contact">
+            <input type="text" placeholder="Ismingizni kiriting" id="ism" />
+            <input type="tel" placeholder="Nomeringizni kiriting" id="tel" />
+            <input
+              type="text"
+              placeholder="Manzilingizni kiriting"
+              id="addres"
+            />
+          </div>
+
+          <div class="size-div">
+            <select name="non" id="nonid">
+              <option value="yupqa" disabled selected>
+                Nonining qalinligi
+              </option>
+              <option value="Yupqa">Yupqa</option>
+              <option value="O'rtacha">O'rta</option>
+              <option value="Qalin">Qalin</option>
+            </select>
+
+            <span class="size-title">Kattaligi</span>
+            <label for="size1" class="size">
+              <input
+                type="radio"
+                value="25"
+                id="size1"
+                name="size"
+                class="input"
+              />
+              <span class="chechmark">25</span> 
+            </label>
+
+            <label for="size2" class="size">
+              <input
+                type="radio"
+                value="30"
+                id="size2"
+                name="size"
+                class="input"
+              />
+              <span class="chechmark">30</span>
+            </label>
+            
+            <label for="size3" class="size">
+              <input
+                type="radio"
+                value="35"
+                id="size3"
+                name="size"
+                class="input"
+              />
+              <span class="chechmark">35</span>
+            </label>
+          </div>
+
+          <!--  -->
+          <div class="qoshimcha">
+            <div class="up-div">
+              <h3 class="up-title">Pitsa ustiga</h3>
+              <input
+                id="tomato"
+                type="checkbox"
+                value="Pomidor"
+                class="up-plus"
+              />
+              <label for="tomato">Pomidor </label>
+              <br />
+              <input
+                id="meat"
+                type="checkbox"
+                value="Kurka go'sht"
+                class="up-plus"
+              />
+              <label for="meat">Kurka go'shti </label>
+              <br />
+              <input
+                id="zaytun"
+                type="checkbox"
+                value="Zaytun"
+                class="up-plus"
+              />
+              <label for="zaytun">Zaytun </label>
+              <br />
+              <input
+                id="cucumber"
+                type="checkbox"
+                value="Bodring"
+                class="up-plus"
+              />
+              <label for="cucumber">Tuzlangan bodring </label>
+              <br />
+              <input
+                id="mushroom"
+                type="checkbox"
+                value="Qo'ziqorin"
+                class="up-plus"
+              />
+              <label for="mushroom">Qo'zi qorin </label>
+              <br />
+              <input id="qazi" type="checkbox" value="Qazi" class="up-plus" />
+              <label for="qazi">Qazi </label>
+              <br />
+            </div>
+
+            <div class="plus">
+              <h3 class="up-title">Qo'shimchalar</h3>
+              <input
+                id="bitter"
+                type="checkbox"
+                value="Achchiq"
+                class="plus"
+              />
+              <label for="bitter"
+                >Achchiq
+              </label>
+              <br />
+              <input
+                id="sausage"
+                type="checkbox"
+                value="Sosiska"
+                class="plus"
+              />
+              <label for="sausage"
+                >Sosiska
+              </label>
+              <br />
+            </div>
+          </div>
+          <button type="submit" class="btn">Send</button>
+        </form>
+        <div class="admin">
+          <h3>Ism: <span class="ism"></span></h3>
+          <h3>Telefon raqami: <span class="tel"></span></h3>
+          <h3>Manzili:<span class="manzili"></span></h3>
+          <h3>Non: <span class="non"></span></h3>
+          <h3>Kattaligi: <span class="kattaligi"></span></h3>
+          <h3>Ustiga:</h3>
+          <ul class="lists">
+            <li class="li-1"></li>
+            <li class="li-2"></li>
+            <li class="li-3"></li>
+            <li class="li-4"></li>
+            <li class="li-5"></li>
+            <li class="li-6"></li>
+          </ul>
+          <h2>Qo'shimchalar:</h2>
+          <ul>
+            <li class="li-7"></li>
+            <li class="li-8"></li>
+          </ul>
+          <h2 class="narx">Narx:</h2>
+        </div>
+      </div>
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>

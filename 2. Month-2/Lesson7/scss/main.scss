@@ -1,0 +1,17 @@
+@import "./normalize";
+@import "./general";
+@import "./variables";
+@import "./mixins";
+@import "./fonts";
+.box-1{
+    background-color: blue;
+    height: 80px;
+    border: 2px solid white;
+
+}
+.card1{
+    background-color: blue;
+    height: 200px;
+    border: 2px solid white;
+
+}

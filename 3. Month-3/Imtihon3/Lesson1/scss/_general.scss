@@ -1,0 +1,22 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Manrope', sans-serif;
+}
+.container {
+  margin: 0 auto;
+  max-width:  1416px;
+  padding:  0 10px;
+}
+li {
+  list-style: none;
+}
+a{
+    text-decoration: none;
+    color: black;
+}

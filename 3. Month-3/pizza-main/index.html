@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>pizza</title>
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="pizza">
+        <div class="pizza_hero">
+          <h2 class="pizza_hero__title">Pizza buyurtma qilish</h2>
+          <form class="form">
+            <div id="surname">
+            <input class="form_input"  type="text" id="input" placeholder="user name"> 
+            <input class="form_input" type="number" id="numbers" placeholder="Phone number" />
+            <input class="form_input" type="email" id="emails" placeholder="User address" />
+            </div>
+            <label for="select" class="form_size__label"
+              >Noni qanday bo'lsin</label
+            >
+            <select id="select" class="form_size">
+              <option selected value="" disabled class="form_size__option">
+                Noni qanday bo'lsin
+              </option>
+              <option value="Yupqa" class="form_size__option">Yupqa</option>
+              <option value="O'rtacha" class="form_size__option">O'rta</option>
+              <option value="Qalin" class="form_size__option">Qalin</option>
+            </select>
+            <h4 class="form__title">Kattaligi:</h4>
+            <div class="size_pizza">
+              <input
+                data-size="25sm"
+                type="radio"
+                name="radio-size"
+                id="small-size"
+                class="size_pizza__input"
+              />
+              <label for="small-size" class="size_pizza__label">25sm</label>
+
+              <input
+                data-size="30sm"
+                type="radio"
+                name="radio-size"
+                id="normal-size"
+                class="size_pizza__input"
+              />
+              <label for="normal-size" class="size_pizza__label">30sm</label>
+
+              <input
+                data-size="35sm"
+                type="radio"
+                name="radio-size"
+                id="big-size"
+                class="size_pizza__input"
+              />
+              <label for="big-size" class="size_pizza__label">35sm</label>
+            </div>
+            <h4 class="form__title">Ustiga nima solaylik</h4>
+            <div class="checkbox-pizza">
+                <div class="hold">
+                  
+                  <label for="tomatoes" class="pizza_label"><input
+                    type="checkbox"
+                    data-add="Pomidor"
+                    id="tomatoes"
+                    class="Ustiga_label"
+                  />Pomidor</label>
+                </div>
+
+                <div class="hold">
+                  
+                  <label for="pickles" class="pizza_label"
+                    ><input
+                    type="checkbox"
+                    data-add="Tuzlangan bodring"
+                    id="pickles"
+                    class="Ustiga_label"
+                  />Tuzlangan bodring</label
+                  >
+                </div>
+
+                <div class="hold">
+                 
+                  <label for="meat" class="pizza_label"> <input
+                    type="checkbox"
+                    data-add="Kurka go'shti"
+                    id="meat"
+                    class="Ustiga_label"
+                  />Kurka go'shti</label>
+                </div>
+
+                <div class="hold">
+                 
+                  <label for="mushroom" class="pizza_label"> <input
+                    type="checkbox"
+                    data-add="Qo'ziqorin"
+                    id="mushroom"
+                    class="Ustiga_label"
+                  />Qo'ziqorin</label>
+                </div>
+
+                <div class="hold">
+                  
+                  <label for="olive" class="pizza_label"><input
+                    type="checkbox"
+                    data-add="Zaytun"
+                    id="olive"
+                    class="Ustiga_label"
+                  />Zaytun</label>
+                </div>
+
+                <div class="hold">
+                  
+                  <label for="sausage" class="pizza_label"><input
+                    type="checkbox"
+                    data-add="Qazi"
+                    id="sausage"
+                    class="Ustiga_label"
+                  />Qazi</label>
+                </div>
+              </div>
+              <h4 class="form__title">Qo'shimchalar</h4>
+              <div class="checkbox-wrapper">
+                <div class="hold">
+                  <input
+                    data-extra="Achchiq"
+                    type="checkbox"
+                    id="bitter"
+                    class="qoshimcha_label"
+                  />
+                  <label for="bitter" class="hold__label">Achchiq</label>
+                </div>
+
+                <div class="hold">
+                  <input
+                    data-extra="Sosiskalar"
+                    type="checkbox"
+                    id="sausages"
+                    class="qoshimcha_label"
+                  />
+                  <label for="sausages" class="hold__label">Sosiskalar</label>
+                </div>
+              </div>
+        </div>
+        <div class="footer">
+            <hr>
+            <h2> name:  <span id="result"></span></h2>
+            <h2>number:  <span id="number"></span></h2>  
+            <h2>email:  <span id="email"></span></h2>  
+            <h2>Non: <span id="non"></span></h2>
+            <h2>Kattaligi: <span id="elsize_javob"></span></h2>
+            <h2>Ustida:<ul id="Elustiga_li"></ul></h2>
+            
+            <h2>Qo'shimcha:<ul id="qoshimcha_label_li"></ul></h2>
+            <h2 class="narx">Narx:</h2>
+        </div>
+      </div>
+      
+    </div>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

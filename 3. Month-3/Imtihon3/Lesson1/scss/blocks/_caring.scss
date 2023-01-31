@@ -1,0 +1,32 @@
+.caring-section {
+  background-image: url(../../img/caring.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: auto;
+}
+
+.caring {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.caring h1 {
+  font-weight: 800;
+  font-size: 48px;
+  line-height: 150%;
+  text-align: center;
+  margin: 100px auto 25px;
+  color: #eefaff;
+}
+.caring p {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 170%;
+  text-align: center;
+  color: #eefaff;
+  width: 750px;
+}
+.caring-btns {
+  margin: 60px auto 188px;
+}

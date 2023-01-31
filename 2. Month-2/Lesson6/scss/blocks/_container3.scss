@@ -1,0 +1,172 @@
+.container-3 {
+  margin: 0 auto;
+  max-width: 1920px;
+  padding: 0 200px;
+  background-image: url(../img/opacity50logo.png);
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  display: flex;
+}
+// .container-3 img {
+//   // position: absolute;
+//   // top: 114px;
+//   // left: 239px;
+// }
+.images {
+  width: 489px;
+  height: 566px;
+  margin: 114px 0 154px;
+}
+.container-3-text {
+  margin-left: 64px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 50px;
+}
+.container-3-text h1 {
+  font-weight: 400;
+  font-size: 55px;
+  line-height: 67px;
+  width: 451px;
+  text-align: center;
+}
+.container-3-text h2 {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  width: 568px;
+}
+.container-3-text p {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 109.4%;
+  letter-spacing: -0.03em;
+  color: #9b9b9b;
+  width: 604px;
+}
+.main-btn-2 {
+  width: fit-content;
+  border: 3px solid #ffd8cb;
+  border-radius: 56px;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+  letter-spacing: 0.06em;
+  padding: 14px 17px;
+}
+
+// Tablet
+@media only screen and (min-device-width: 765px) and (max-device-width: 1850px) {
+  .container-3 {
+    max-width: 968px;
+    padding: 0 44px;
+    background-image: url(none);
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    flex-direction: column-reverse;
+   
+  }
+
+  .container-3-text {
+    margin-left: 0px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 27px;
+  }
+  .container-3-text h1 {
+    font-weight: 600;
+    font-size: 45px;
+    line-height: 55px;
+    max-width: 380px;
+    text-align: left;
+    margin-top: 50px;
+  }
+  .container-3-text h1::after {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 80px;
+    background-color: #77215d;
+    margin-top: 20px;
+  }
+  .container-3-text h2 {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    width: 569px;
+  }
+  .container-3-text p {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 109.4%;
+    letter-spacing: -0.03em;
+    width: 565px;
+  }
+  .images {
+    width: 489px;
+    height: 566px;
+    margin: 40px 0 20px;
+    align-self: flex-end;
+  }
+}
+
+// Phone
+@media only screen and (max-width: 764px) {
+  .container-3 {
+    background-image: none;
+    padding: 0 14px;
+    max-width: 360px;
+    margin: 0 auto;
+    flex-direction: column;
+  }
+  .images {
+    margin: 30px auto 50px;
+    width: 324px;
+    height: 345px;
+  } 
+  .images img {
+    
+    padding: 0;
+    width: 324px;
+    height: 345px;
+  }
+
+  .container-3-text {
+    
+  margin-left: 0px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
+    h1 {
+      font-weight: 400;
+      font-size: 30px;
+      line-height: 37px;
+      text-align: left;
+      color: #000000;
+      width: 246px;
+    }
+    h2 {
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 18px;
+      letter-spacing: 0.05em;
+      width: 312px;
+    }
+    p {
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 118.4%;
+      width: 316px;
+
+      letter-spacing: 0.015em;
+    }
+  }
+}

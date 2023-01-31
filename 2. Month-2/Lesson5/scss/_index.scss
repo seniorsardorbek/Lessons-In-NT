@@ -1,0 +1,257 @@
+.header {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 10px;
+}
+.menu-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 268px;
+}
+.sign-btn {
+  @include btn(#f5f6fb, black);
+  font-weight: 400;
+  font-size: 16px;
+}
+.nav {
+  display: flex;
+  gap: 60px;
+}
+#menu-bar {
+  display: none;
+}
+label {
+  display: none;
+}
+
+// intro
+.intro {
+  background-image: url(../img/image3.jpg);
+  background-repeat: no-repeat;
+  background-position: center right 40px;
+  height: 550px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  .intro__text {
+    display: flex;
+    flex-direction: column;
+    width: 443px;
+    h1 {
+      font-weight: 700;
+      font-size: 55px;
+      line-height: 82px;
+    }
+    p {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 32px;
+      color: #575455;
+      padding: 35px 0;
+    }
+  }
+}
+.btn {
+  @include btn(#1f7cff, white);
+}
+.box-container {
+  display: flex;
+  gap: 12px;
+}
+.circle-text {
+  h4 {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #070f18;
+  }
+  h5 {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 21px;
+    color: #575455;
+  }
+}
+.box-1 {
+  background-color: #f5f6fb;
+  position: absolute;
+  right: 490px;
+  padding: 15px;
+  border-radius: 20px;
+  box-shadow: 7px 9px 18px rgba(0, 0, 0, 0.05);
+}
+.circle-2 {
+  @include circle(#191046, "../img/fi_check-circle.svg");
+}
+.circle {
+  @include circle(#191046, "../img/vector.svg");
+}
+.box-2 {
+  position: absolute;
+  right: 0px;
+  top: 135px;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  h5 {
+    width: 151px;
+
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+// Buisness
+
+.buisness {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 130px;
+  h6 {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: #f75c4e;
+  }
+  h2 {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 54px;
+    margin: 16px auto 34px;
+  }
+  p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+    text-align: center;
+    color: #575455;
+    width: 395px;
+  }
+}
+.buisness-boxes {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 60px 93px;
+  margin: 70px auto 130px;
+}
+.b-box {
+  display: flex;
+  gap: 24px;
+  .circle-text {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    h4 {
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 30px;
+      color: #070f18;
+    }
+    p {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 32px;
+      color: #575455;
+      width: 236px;
+    }
+  }
+}
+
+.circle-3 {
+  @include circle(#1f7cff, "../img/fi_briefcase.svg");
+  width: 60px;
+  height: 60px;
+}
+.circle-4 {
+  @include circle(#f75c4e, "../img/fi_check-circle.svg");
+  width: 60px;
+  height: 60px;
+}
+.circle-5 {
+  @include circle(#191046, "../img/fi_send1.svg");
+  width: 60px;
+  height: 60px;
+}
+.circle-6 {
+  @include circle(#ff1fb3, "../img/fi_send2.svg");
+  width: 60px;
+  height: 60px;
+}
+.circle-7 {
+  @include circle(#5c4ef7, "../img/fi_send3.svg");
+  width: 60px;
+  height: 60px;
+}
+.circle-8 {
+  @include circle(#f7954e, "../img/fi_send4.svg");
+  width: 60px;
+  height: 60px;
+}
+
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  margin-bottom: 50px;
+  img {
+    border-radius: 40px;
+  }
+}
+.images {
+  position: relative;
+  .btn-svg {
+    position: absolute;
+    top: calc(50% - 35px);
+    left: calc(50% - 35px);
+  }
+}
+.form-text {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 35%;
+  gap: 0;
+  height: fit-content;
+  margin-left: 65px;
+  h2 {
+    margin: 0;
+  }
+  p {
+    text-align: left;
+    margin: 0;
+  }
+}
+form {
+  display: flex;
+  position: absolute;
+  bottom: 100px;
+  left: 55%;
+  input {
+    background: #f5f6fb;
+    border-radius: 50px;
+    width: 300px;
+    margin-right: -40px;
+    border: none;
+    &:focus {
+      outline: none;
+    }
+    &::placeholder {
+      padding: 15px 24px;
+      color: #575455;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+}
