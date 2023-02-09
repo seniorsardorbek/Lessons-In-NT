@@ -61,7 +61,8 @@ function render(arr, ell) {
         modalCard.append(modalImg, modalName, modalDiv);
       }
     });
-    elLi.addEventListener("click", (e) => {
+    
+    .addEventListener("click", (e) => {
       if (e.target.matches(".likeBtn")) {
         var clikedId = Number(e.target.dataset.pokid);
         const likeArr = pokemons.find((item) => {

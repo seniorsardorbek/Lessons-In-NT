@@ -9,7 +9,8 @@ let hisEl = $(".history");
 let lan = $(".form-selectt");
 let data = null;
 let history = JSON.parse(localStorage.getItem("history")) || [];
-// rednerHis()
+rednerHis();
+
 let getAPI = new Promise((res, rej) => {
   fetch("http://xolisnazar.uz/api/index/currency")
     .then((res) => res.json())
@@ -35,17 +36,14 @@ toCcy.addEventListener("change", (e) => {
   console.log(history);
 });
 
+// calculate
 function calculate(type) {
   let obj = data.find((item) => item.Ccy == select.value);
-  let date = new Date();
-  // console.log(date);
   let hisobj = {
     id: history[history.length - 1]?.id + 1 || 0,
     from: null,
     to: null,
-    date: `${date.getDate > 10 ? date.getDate() : date.getDate()}:${
-      date.getMonth() + 1
-    }:${date.getFullYear()}`,
+    date: getTime(),
     fromN: null,
     toN: null,
   };
@@ -57,8 +55,8 @@ function calculate(type) {
       hisobj.to = "UZS";
       hisobj.fromN = formcCcy.value;
       hisobj.toN = (formcCcy.value / obj.Rate).toFixed(1);
-      history.push(hisobj);
-      localStorage.setItem("history", JSON.stringify(hisobj));
+      history.unshift(hisobj);
+      localStorage.setItem("history", JSON.stringify(history));
 
     case "*":
       formcCcy.value = (toCcy.value * obj.Rate).toFixed(1);
@@ -66,11 +64,9 @@ function calculate(type) {
       hisobj.to = obj.Ccy;
       hisobj.fromN = toCcy.value;
       hisobj.toN = formcCcy.value;
-      history.push(hisobj);
-      localStorage.setItem("history", JSON.stringify(hisobj));
+      history.unshift(hisobj);
+      localStorage.setItem("history", JSON.stringify(history));
   }
-
-  console.log(history);
   rednerHis();
 }
 function rednerHis() {
@@ -80,11 +76,13 @@ function rednerHis() {
       <div class="card mt-5 w-50 m-auto">
             <div class="card-header d-flex justify-content-between">
               <h5>${item.to}=>${item.from}</h5>
-              <span>${item.date}</span>
+              <span>${getTime()}</span>
             </div>
             <div class="card-body d-flex justify-content-between">
               <h3>${item.fromN}=>${item.toN}</h3>
-              <button type="button" onclick="delete(id)" class="btn btn-danger">Delete</button>
+              <button type="button" onclick="deletefc(${
+                item.id
+              })" class="btn btn-danger">Delete</button>
             </div>
           </div>
       `;
@@ -96,8 +94,6 @@ lan.addEventListener("change", () => {
   langu();
 });
 function langu() {
-  console.log("salom");
-  console.log(lan.value);
   switch (lan.value) {
     case "EN":
       select.innerHTML = "";
@@ -126,4 +122,31 @@ function langu() {
         select.innerHTML += temp;
       });
   }
+}
+
+function deletefc(id) {
+  history.splice(
+    history.findIndex(
+      (item) => item === history.find((fitem) => fitem.id === id)
+    ),
+    1
+  );
+  rednerHis();
+  localStorage.setItem("history", JSON.stringify(history));
+}
+
+function getTime() {
+  const now = new Date();
+  const date = now.getDate() < 10 ? "0" + now.getDate() : now.getDate();
+  const month =
+    now.getMonth() < 10 ? "0" + (now.getMonth() + 1) : now.getMonth();
+  const year = now.getFullYear();
+
+  const hour = now.getHours() < 10 ? "0" + now.getHours() : now.getHours();
+  const minute =
+    now.getMinutes() < 10 ? "0" + now.getMinutes() : now.getMinutes();
+  const second =
+    now.getSeconds() < 10 ? "0" + now.getSeconds() : now.getSeconds();
+
+  return `${hour}:${minute}, ${date}.${month}.${year}`;
 }

@@ -1,0 +1,256 @@
+.swiper {
+  height: 790px;
+}
+.swiper-slide:nth-child(2) {
+  background: linear-gradient(
+    90deg,
+    rgb(255, 255, 255) 64%,
+    rgba(39, 39, 192, 1) 64%
+  );
+  border: none;
+}
+.main {
+  display: flex;
+}
+.bar-modal {
+  display: flex;
+  position: relative;
+  height: 790px;
+}
+.menu-list {
+  position: absolute;
+  color: white;
+  padding: 90px;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  height: 790px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  background-color: rgb(0, 0, 0);
+  visibility: hidden;
+  transform: translateX(100%);
+  transition: all 0.5s;
+}
+.menu-hover {
+  transition: all ease 0.3s;
+}
+.menu-hover:hover {
+  color: red;
+  transform: translateY(-60px);
+}
+.menu {
+  display: flex;
+  width: 30px;
+  background-color: black;
+
+  align-items: center;
+  color: white;
+  justify-content: center;
+  z-index: 999;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 50px;
+  img {
+    width: 150px;
+  }
+}
+.telegram__icon {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+.tg_icon_text {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 150%;
+  text-align: right;
+  color: #ffffff;
+}
+.icon-tg {
+  color: #ffffff;
+}
+.intro {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 50px;
+  padding-top: 0;
+}
+.intro-img img {
+  width: 750px;
+  margin-right: 150px;
+}
+.intro-text {
+  h1 {
+    font-family: "Code Next";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 60px;
+    color: #293bdc;
+  }
+  p {
+    font-family: "Code Next";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000000;
+    margin: 20px 0 80px;
+  }
+  button {
+    @include button;
+  }
+}
+.slide-2 {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+.slide-2-text {
+  width: 40%;
+  height: 790px;
+  display: block;
+  background-color: rgba(39, 39, 192, 1);
+}
+.retangle {
+  height: 790px;
+  width: 20%;
+  background-color: red;
+  background-size: cover;
+  background-repeat: no-repeat;
+  &:nth-child(2) {
+    background-image: url(../../img/Rectangle\ 3.png);
+  }
+  &:nth-child(3) {
+    background-image: url(../../img/Rectangle\ 4.png);
+  }
+  &:nth-child(4) {
+    background-image: url(../../img/Rectangle\ 5.png);
+  }
+  p {
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 40px;
+    position: absolute;
+    bottom: 45px;
+    margin-left: 20px;
+    color: #ffffff;
+  }
+}
+.retangle-2 {
+  &:nth-child(1) {
+    background-image: url(../../img/Rectangle\ 5.png);
+  }
+  &:nth-child(2) {
+    background-image: url(../../img/Rectangle\ 6.png);
+  }
+  &:nth-child(3) {
+    background-image: url(../../img/Rectangle7.png);
+  }
+}
+.accordion {
+  transition: all ease 1s;
+}
+.accordion:hover .accordion-item {
+  display: block;
+}
+.accordion-item {
+  display: none;
+  width: 138px;
+  font-size: 16px;
+  opacity: 0.7;
+}
+.list-a a {
+  color: white;
+}
+.swiper-slide:nth-child(3) {
+  display: flex;
+}
+
+.slide-2-text {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  img {
+    margin-top: 50px;
+  }
+  h1 {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 60px;
+    margin: 250px auto;
+    color: #ffffff;
+  }
+
+  p {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 24px;
+    display: flex;
+    align-items: flex-end;
+    color: #ffffff;
+  }
+}
+.slide-3-text {
+  display: block;
+  padding: 50px 60px;
+  h1 {
+    margin: 150px 0 0;
+  }
+  h4 {
+    width: 443px;
+    margin: 50px 0;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 150%;
+    color: #ffffff;
+  }
+}
+.scroll {
+  width: 100px;
+  height: 4px;
+  background-color: white;
+  display: block;
+}
+.scroll-2 {
+  width: 100px;
+  height: 2px;
+  background-color: white;
+  display: block;
+}
+.btn{
+  position: relative;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 30px;
+  text-align: center;
+  padding: 15px 40px;
+  border-radius: 12px;
+  color: #000000;
+  border: 4px solid #293bdc;
+  .hover{
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -4px;
+    right: 15px;
+    width: 25px;
+    height: 4px;
+    background-color: white;
+    transition: all 0.5s;
+  }
+  &:hover .hover {
+    transform: translateX(-150px);
+  }
+  &:hover{
+    background-color: #293bdc;
+    color: white;
+  }
+}

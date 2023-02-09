@@ -11,25 +11,26 @@ const hourEl = document.getElementById("hour");
 const minuteEl = document.getElementById("minute");
 const secondEl = document.getElementById("second");
 const closeEl = document.getElementById("close");
-// console.log(fullDay);
+const info = document.querySelector(".info");
+// console.log(info);
 
-
-let editItemId 
+let editItemId;
+let tokenn = JSON.parse(localStorage.getItem("token"));
 // chek
-let todos = JSON.parse(localStorage.getItem("list"))
-  ? JSON.parse(localStorage.getItem("list"))
-  : [];
-if (todos.length) showTodos();
+let todos = [];
+showTodos();
 
 // set todos local storage
 function setTodos() {
-  localStorage.setItem("list", JSON.stringify(todos));
+  // localStorage.setItem("list", JSON.stringify(todos));
 }
 
-function showMessage(where, message) {
-  document.getElementById(`${where}`).textContent = message;
+function showMessage(where, message, color) {
+  document.querySelector(where).textContent = message;
+  document.querySelector(where).style.color = color;
   setTimeout(() => {
-    document.getElementById(`${where}`).textContent = "";
+    document.querySelector(where).textContent = "Type what you should do";
+    document.querySelector(where).style.color = "green";
   }, 2500);
 }
 
@@ -54,100 +55,199 @@ setInterval(() => {
   getTime();
 }, 1000);
 
-// show ttodos
-function showTodos() {
-  const todos = JSON.parse(localStorage.getItem("list"));
-
-  listGroupTodo.innerHTML = "";
-  todos.forEach((item, i) => {
-    listGroupTodo.innerHTML += `<li class="list-group-item d-flex justify-content-between  ${
-      item.completed === true ? 'complated' : ''
-    } " ondblclick = (setCompleted(${i})) >
-        ${item.text}
-        <div class="todo-icons">
-          <span class="opacity-50 me-2">${item.time}</span>
-          <img src="./img/edit.svg" onclick=(editTodo(${i})) alt="edit icon " width="25" height="25">
-          <img src="./img/delete.svg"  onclick=(deleteTodo(${i}))  alt="delete icon " width="25" height="25">          <img src="./img/close.svg" alt="edit icon " width="25" height="25">
-        </div>
-      </li>`;
+//! show ttodos=
+async function showTodos() {
+  const response = await fetch("https://todo-for-n92.cyclic.app/todos/all", {
+    method: "GET",
+    headers: {
+      "x-access-token": tokenn,
+    },
   });
+  if (!response.ok) {
+    throw new Error(`HTTP error! status: ${response.status}`);
+  }
+  const data = await response.json();
+  todos = data.allTodos;
+  listGroupTodo.innerHTML = "";
+  todos.reverse().forEach((item) => {
+    listGroupTodo.innerHTML += `<li class="list-group-item d-flex justify-content-between ${
+      item.completed === true ? "complated" : ""
+    } " ondblclick = "setCompleted('${item._id}')">
+            ${item.task}
+            <div class="todo-icons">
+              <span class="opacity-50 me-2 time">${item.createdAt}</span>
+              <img src="./img/edit.svg" onclick="editTodo('${
+                item._id
+              }')" alt="edit icon " width="25" height="25">
+              <img src="./img/delete.svg"  onclick="deleteTodo('${
+                item._id
+              }')"  alt="delete icon " width="25" height="25" >
+            </div>
+            </li>`;
+  });
+  console.log(todos);
+  console.log(tokenn);
 }
 
-//   get todo
+showTodos();
+//!   get todo
 formCreate.addEventListener("submit", (e) => {
   e.preventDefault();
-
   const todoText = formCreate["input-create"].value.trim();
   formCreate.reset();
   if (todoText.length) {
-    todos.push({
-      text: todoText,
-      time: getTime(),
-      completed: false,
-    });
-    setTodos();
-    showTodos();
-  } else {
-    showMessage("message-create", "Please, enter text");
+    fetch("https://todo-for-n92.cyclic.app/todos/add", {
+      method: "POST",
+      body: JSON.stringify({
+        task: todoText,
+      }),
+      headers: {
+        "Content-type": "application/json; charset=UTF-8",
+        "x-access-token": tokenn,
+      },
+    })
+      .then(function (response) {
+        if (response.ok) {
+          return response.json();
+        }
+        return Promise.reject(response);
+      })
+      .then(function (data) {
+        showMessage(".info", data.message, "orange");
+        console.log(data);
+        showTodos();
+      })
+      .catch(function (error) {
+        console.warn("Something went wrong.", error);
+      });
+    setTimeout(() => {
+      info.innerHTML = "Type what you should do";
+      info.style.color = "green";
+    }, 3000);
   }
 });
-
+// !delete
 function deleteTodo(id) {
-  const deleteTodos = todos.filter((item, i) => {
-    return i !== id;
-  });
-  todos = deleteTodos;
-  setTodos();
-  showTodos();
+  fetch(`https://todo-for-n92.cyclic.app/todos/${id}`, {
+    method: "DELETE",
+    headers: {
+      "x-access-token": tokenn,
+    },
+  })
+    .then(function (response) {
+      if (response.ok) {
+        return response.json();
+      }
+      return Promise.reject(response);
+    })
+    .then(function (data) {
+      showMessage(".info", data.message, "red");
+      console.log(data);
+      showTodos();
+    })
+    .catch(function (error) {
+      console.warn("Something went wrong.", error);
+    });
+  console.log(id);
 }
+
+// !setcompleted
 function setCompleted(id) {
-  // console.log('salom');
-  const completedTodos = todos.map((item, i) => {
-    if (id == i) {
-      return { ...item, completed: item.completed == true ? false : true };
-    } else {
-      return { ...item };
-    }
-  });
-  todos = completedTodos;
+  console.log("mmm");
+  fetch(`https://todo-for-n92.cyclic.app/todos?id=${id}`, {
+    method: "PUT",
+    headers: {
+      "x-access-token": tokenn,
+    },
+  })
+    .then(function (response) {
+      if (response.ok) {
+        return response.json();
+      }
+      return Promise.reject(response);
+    })
+    .then(function (data) {
+      showMessage(".info", data.message, "pink");
+      console.log(data);
+      showTodos();
+    })
+    .catch(function (error) {
+      console.warn("Something went wrong.", error);
+    });
   setTodos();
-  showTodos();
 }
-console.log(todos);
-
-
-formEdit.addEventListener('submit' ,(e)=>{
-  e.preventDefault()
+// !edit todo
+formEdit.addEventListener("submit", (e) => {
+  e.preventDefault();
 
   const todoText = formEdit["input-edit"].value.trim();
-  formEdit.reset();
+  console.log(editItemId);
   if (todoText.length) {
-    todos.splice(editItemId  , 1,{
-      text: todoText,
-      time: getTime(),
-      completed: false,
-    });
-
-    setTodos();
-    showTodos();
-    close()
-  } else {
-    showMessage("message-create", "Please, enter text");
+    fetch(`https://todo-for-n92.cyclic.app/todos/${editItemId}`, {
+      method: "PUT",
+      headers: {
+        "x-access-token": tokenn,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        task: todoText,
+      }),
+    })
+      .then(function (response) {
+        if (response.ok) {
+          return response.json();
+        }
+        return Promise.reject(response);
+      })
+      .then(function (data) {
+        showMessage(".info", data.message, "green");
+        console.log(data);
+        showTodos();
+      })
+      .catch(function (error) {
+        console.warn("Something went wrong.", error);
+      });
   }
-})
-  
-overlay.addEventListener('click' , close)
-closeEl.addEventListener('click' , close)
+  close();
+});
 
-function editTodo(id){
-  editItemId = id
-  open()
+console.log(todos);
+overlay.addEventListener("click", close);
+closeEl.addEventListener("click", close);
+
+function editTodo(id) {
+  editItemId = id;
+  fetch(`https://todo-for-n92.cyclic.app/todos/${editItemId}`, {
+    method: "GET",
+    headers: {
+      "x-access-token": tokenn,
+    },
+  })
+    .then(function (response) {
+      if (response.ok) {
+        return response.json();
+      }
+      return Promise.reject(response);
+    })
+    .then(function (data) {
+      formEdit["input-edit"].value = data.todo.task;
+    })
+    .catch(function (error) {
+      console.warn("Something went wrong.", error);
+    });
+  open();
 }
-function open(){
-  modal.classList.remove('hidden')
-  overlay.classList.remove('hidden')
+function open() {
+  modal.classList.remove("hidden");
+  overlay.classList.remove("hidden");
 }
-function close(){
-  modal.classList.add('hidden')
-  overlay.classList.add('hidden')
+function close() {
+  modal.classList.add("hidden");
+  overlay.classList.add("hidden");
+}
+
+// Token replace
+let token = localStorage.getItem("token");
+if (!token) {
+  window.location.replace("/login.html");
 }

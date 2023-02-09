@@ -158,31 +158,6 @@ function render(arr, whr) {
 
 
 
-
-
-
-
-
-  
-  // const foundProdIndex = cart.prods.findIndex((prod) => {
-  //   return prod.id === id;
-  // });
-  //  if (foundProdIndex === -1) {
-  //     cart.prods.push({
-  //       id,
-  //       qty: ,
-  //     });
-  //     cart.totalPrice += price;
-  //   } 
-  //   else{
-  //     cart.totalPrice += price;
-  //     cart.prods.qty += 1
-  //   }
-  //   cart.quantity += 1;
-  //   qtyEl.textContent = cart.quantity;
-  //   console.log(cart);
-  
-
 function minus (id , price){
  
 }
