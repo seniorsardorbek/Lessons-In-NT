@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.App {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.logo {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  color: #f75532;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+li {
+  list-style: none;
+}
+
+.navbar {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+.navbar li:hover {
+  color: #f75532;
+}
+
+/*  */
+.btn1 {
+  color: white;
+  background-color: #f75532;
+  padding: 7px 20px;
+  border-radius: 12px;
+}
+.btn2 {
+  color: #f75532;
+  background-color: #fff;
+  padding: 7px 20px;
+  border: 1px solid #f75532;
+  border-radius: 12px;
+}
+/* Intro  */
+.intro-grid{
+    display: grid;
+    grid-template-areas: 1, 1, 2
+                          3, 3, 2;
+
+}
+.grid-item {
+    display: block;
+  width: 180px;
+  height: 180px;
+  background-color: #f75532;
+}
