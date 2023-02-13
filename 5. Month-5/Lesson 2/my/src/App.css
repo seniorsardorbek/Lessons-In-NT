@@ -1,0 +1,94 @@
+li {
+  list-style: none;
+}
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 10px;
+}
+header {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  color: #f75532;
+}
+nav {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+nav li {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  color: #001f29;
+}
+nav li:hover {
+  color: #fe4610;
+}
+.btn1 {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  padding: 15px 28px;
+  background-color: #fe4610;
+  border-radius: 12px;
+  color: #ffffff;
+}
+.btn2 {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  padding: 15px 28px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  border: #fe4610 1px solid;
+  color: #fe4610;
+}
+/* Intro */
+.intro {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.intro-text{
+    width: 410px;
+    margin-top: 100px;
+}
+.intro-title {
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 64px;
+  color: #001f29;
+}
+.intro-parag {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 32px;
+  color: #b9c0c1;
+  margin: 16px  0 32px;
+}
+.intro-text .btn2{
+    margin-left: 16px;
+}
+.intro-grid{
+    width: 580px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 80px;
+
+}
+.item{
+    border-radius: 10px;
+
+ width: 180px;
+ height: 180px;
+ background-color: #FFE1D8;
+}
