@@ -1,0 +1,18 @@
+.container{
+    max-width: 1200px ;
+    margin:  0 auto;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    img{
+        width: 30px;
+    }
+}
+nav{
+    display: flex;
+    gap: 30px;
+  li{
+    list-style: none;
+  }
+}

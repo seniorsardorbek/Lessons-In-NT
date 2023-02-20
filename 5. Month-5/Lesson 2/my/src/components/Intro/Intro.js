@@ -3,8 +3,11 @@ import Button from "../Butoon/Button";
 
 function Intro() {
   return (
-    <div className="intro">
-      <div className="intro-text">
+    <div
+      className="intro 
+    "
+    >
+      <div className="intro-text ">
         <h1 className="intro-title">Get Your Vaccine, Get Your Health</h1>
         <p className="intro-parag">
           There are many variations of passages of Lorem Ipsum available, but
@@ -13,13 +16,11 @@ function Intro() {
         <Button style={"btn1"} btnName={"Get Your Vaccine"} />
         <Button style={"btn2"} btnName={"Learn more"} />
       </div>
-      <div className="intro-grid">
-        <div className="item"></div>
-        <div className="item"></div>
-        <div className="item"></div>
-        <div className="item"></div>
-        <div className="item"></div>
-        <div className="item"></div>
+      <div class="parent">
+        <div class="oke"></div>
+        <div class="okee"></div>
+        <div class="poke"></div>
+        <div class="soke"></div>
       </div>
     </div>
   );

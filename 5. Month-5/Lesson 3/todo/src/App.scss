@@ -1,0 +1,38 @@
+.input {
+  padding: 7px 12px;
+  border-radius: 9px;
+}
+
+.button {
+  padding: 7px 12px;
+  border-radius: 9px;
+}
+
+.container{
+ width: 1220px;
+  margin: 0 auto;
+}
+.form{
+  padding: 60px;
+  display: block;
+  margin: 0 auto;
+}
+.list{
+  list-style: none;
+  padding: 30px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+
+}
+.info{
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+  font-size: 20px;
+  padding: 30px;
+}
+.opacity{
+  opacity: 0.3;
+  text-decoration: line-through;
+}
